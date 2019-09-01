@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<title>chatbot application</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position:center;
+    background-image: url("col.jpg");
+    min-height: 90%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="http://www.nitk.ac.in" class="w3-bar-item w3-button w3-wide" target=_blank><img src="nitk-logo.jpg" height=20 width=20></a>
+    <!-- Right-sided navbar links -->
+	    <div class="w3-right w3-hide-small">
+     <a href="console.html" target=_blank class="w3-bar-item w3-button"><i class="fa fa-th"></i>Console</a> 
+	 <a href="#whattoask" class="w3-bar-item w3-button">What to Ask</a> 
+     <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+     <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Console</a>
+  <a href="#howtouse" onclick="w3_close()" class="w3-bar-item w3-button">How To Use</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white" style="padding:20px">
+    <span class="w3-jumbo w3-hide-small">Welcome to NITK</span><br>
+    <span class="w3-xxlarge">College chat bot Application</span><br>
+    <span class="w3-large">Ask us. We answer</span><br>
+	<span class="w3-large">Click on console to take you to the bot</span>
+  </div> 
+</header>
+<!--How to use section-->
+
+<div id="whattoask">
+    <h3 class="w3-center">What all can you ask us.</h3>
+	  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo w3-center"><img src="fac.jpg" width=100 height=100></i>
+      <p class="w3-large">Faculty</p>
+      <p>Get to know faculty of our college and your department`.</p>
+    </div>
+        <div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="tim.jpg" width=100 height=100></i>
+      <p class="w3-large">Campus Timings</p>
+      <p>Know the timings of all the departments and blocks in the campus.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="doc.jpg" width=100 height=100></i>
+      <p class="w3-large">Doctors</p>
+      <p>Find the nearest doctor for your problems and book an apointment.</p>
+    </div>
+	<div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="food.jpg" width=100 height=100></i>
+      <p class="w3-large">Order Food</p>
+      <p>Get the menu and order food from any NC of choice.</p>
+    </div>
+	<div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="fest.jpg" width=100 height=100></i>
+      <p class="w3-large">semester Schedules</p>
+      <p>know the program schedules and holidays lined up for the semester.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="lib.jpg" width=100 height=100></i>
+      <p class="w3-large">Library check</p>
+      <p>check out the rack and availability of books in the library.</p>
+    </div>
+	<div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="hostel.jpg" width=100 height=100></i>
+      <p class="w3-large">Hostel Blocks</p>
+      <p>know your wardens and their contact info.</p>
+    </div>
+	<div class="w3-quarter">
+      <i class="w3-margin-bottom w3-jumbo"><img src="gpa.jpg" width=100 height=100></i>
+      <p class="w3-large">SGPA Calculator</p>
+      <p>Calculate the pointer that you will get in a semester.</p>
+    </div><br>
+  </div>
+ </div>
+<p><h3>And many more...Click on console to take you to the chatbot<h3></p><br>
+  
+<!-- Work Section -->
+<!--
+    <div id="work">
+    <iframe width="1000" height="600" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/67506c94-8fdd-4645-ac42-a26645b8df60"></iframe>
+   </div>
+-->
+<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/67506c94-8fdd-4645-ac42-a26645b8df60"></iframe>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE CHAT BOT</h3>
+  <p class="w3-center w3-large">Key features of our bot</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Responsive</p>
+      <p>We respond to your messages. Any query...ask us and we respond</p>
+    </div>
+        <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Quick and easy to use</p>
+      <p>Our bot usually responds quickly and is hassle free and can be used by any one easily.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Console</p>
+      <p>Click on the console to go to the bot section where you can post your queries</p>
+    </div>
+	  <div class="w3-quarter">
+      <i class= "w3-margin-bottom w3-jumbo"><img src="nitk-logo.jpg" width=100 height=100></i>
+      <p class="w3-large">Complete Guide</p>
+      <p>Learn everything about your college with us.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">OUR TEAM</h3>
+  <p class="w3-center w3-large"><h6>Our developers<h6></p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        
+        <div class="w3-container">
+          <h3>V.Shireesh</h3>
+          <p class="w3-opacity">16IT147</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        
+        <div class="w3-container">
+          <h3>B.Nishanth</h3>
+		   <p class="w3-opacity">16IT110</P>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        
+        <div class="w3-container">
+          <h3>A.Naveen Kumar</h3>
+		  <p class="w3-opacity">16IT105</p>
+        </div>
+      </div>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        
+        <div class="w3-container">
+          <h3>I.Ravindra Varma</h3>
+		  <p class="w3-opacity">16IT116</p>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+</body>
+</html>
